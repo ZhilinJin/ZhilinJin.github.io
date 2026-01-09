@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omni Forest | Massachusetts-focused one-stop living services for international students</title>
+    <title>Omni Forest | Pet Sitting, Apartments & Travel Advisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -554,6 +554,10 @@
             box-shadow: 0 15px 40px var(--shadow);
         }
 
+        .service-card.hidden {
+            display: none;
+        }
+
         .service-icon {
             width: 60px;
             height: 60px;
@@ -695,208 +699,6 @@
             color: var(--success);
         }
 
-        /* Tour Section */
-        .tour-section {
-            background: var(--cream);
-        }
-
-        .tour-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px;
-            height: 500px;
-        }
-
-        .tour-item {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .tour-item:first-child {
-            grid-row: span 2;
-        }
-
-        .tour-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .tour-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .tour-item-label {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: var(--white);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
-        /* Booking Section */
-        .booking-section {
-            background: var(--white);
-        }
-
-        .booking-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .calendar {
-            background: var(--cream);
-            border-radius: 24px;
-            padding: 32px;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-
-        .calendar-header h3 {
-            font-size: 1.3rem;
-        }
-
-        .calendar-nav {
-            display: flex;
-            gap: 8px;
-        }
-
-        .calendar-nav button {
-            width: 36px;
-            height: 36px;
-            border: none;
-            border-radius: 50%;
-            background: var(--white);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .calendar-nav button:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            text-align: center;
-        }
-
-        .calendar-day-name {
-            font-weight: 600;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            padding: 8px 0;
-        }
-
-        .calendar-day {
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .calendar-day:hover {
-            background: var(--accent-light);
-        }
-
-        .calendar-day.selected {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .calendar-day.available {
-            background: var(--accent-light);
-            color: var(--primary-dark);
-        }
-
-        .calendar-day.unavailable {
-            color: var(--text-light);
-            cursor: not-allowed;
-        }
-
-        .booking-form {
-            background: var(--cream);
-            border-radius: 24px;
-            padding: 32px;
-        }
-
-        .booking-form h3 {
-            font-size: 1.3rem;
-            margin-bottom: 24px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-            background: var(--white);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .booking-price {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: var(--accent-light);
-            border-radius: 12px;
-            margin-bottom: 24px;
-        }
-
-        .booking-price-label {
-            font-weight: 600;
-        }
-
-        .booking-price-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
         /* Testimonials Section */
         .testimonials-section {
             background: var(--cream);
@@ -925,6 +727,10 @@
         .testimonial-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .testimonial-card.hidden {
+            display: none;
         }
 
         .testimonial-stars {
@@ -1103,7 +909,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 60px;
             margin-bottom: 60px;
         }
@@ -1237,7 +1043,6 @@
         @media (max-width: 1024px) {
             .hero-container,
             .area-container,
-            .booking-container,
             .about-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -1259,15 +1064,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .tour-grid {
-                grid-template-columns: 1fr 1fr;
-                height: auto;
-            }
-
-            .tour-item:first-child {
-                grid-row: auto;
-                grid-column: span 2;
-            }
         }
 
         @media (max-width: 768px) {
@@ -1313,13 +1109,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .tour-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tour-item:first-child {
-                grid-column: auto;
-            }
 
             .section {
                 padding: 60px 0;
@@ -1367,13 +1156,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .calendar-grid {
-                gap: 4px;
-            }
-
-            .calendar-day {
-                font-size: 0.8rem;
-            }
         }
 
         /* Animations */
@@ -1431,12 +1213,12 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#pets">Our Pets</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#services" data-service="pets">Pet Sitting</a></li>
+                <li><a href="#services" data-service="apartments">Apartments</a></li>
+                <li><a href="#services" data-service="travel">Travel Advisor</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#booking" class="nav-cta">Client Portal <i class="fas fa-arrow-right"></i></a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us <i class="fas fa-arrow-right"></i></a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -1450,42 +1232,42 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-award"></i>
-                    Licensed & Insured Since 2019
+                    Pet Sitting • Apartments • Travel Advisor
                 </div>
-                <h1>Premium <span>Pet Care</span></h1>
-                <p class="hero-subtitle">in Wellesley Hills</p>
+                <h1>Your one-stop <span>Hub</span></h1>
+                <p class="hero-subtitle">Pet sitting, lease support, and travel advising across Greater Boston</p>
                 <p class="hero-description">
-                    Personalized home boarding for your beloved pets.<br>
-                    Lovingly welcomed for <strong>🐱 cats</strong> and <strong>🐕 dogs</strong>
+                    Book trusted pet sitters, get apartment-finding support, and access travel deals in one place.<br>
+                    Built for <strong>🐱 cats</strong>, <strong>🐕 dogs</strong>, and their people.
                 </p>
                 <div class="hero-pricing">
-                    <span><strong>Cat:</strong> $25/night | <strong>Dog:</strong> $40-45/night</span>
-                    <span><strong>Dog Daycare:</strong> $25-30 (10 Hours)</span>
+                    <span><strong>Pet Sitting:</strong> from $25/night | <strong>Apartment Help:</strong> licensed guidance</span>
+                    <span><strong>Travel Advisor:</strong> hotel & flight savings support</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#booking" class="btn btn-primary">
-                        Reserve Your Spot <i class="fas fa-arrow-right"></i>
+                    <a href="#contact" class="btn btn-primary">
+                        Get in Touch <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#pets" class="btn btn-secondary">
-                        Meet Our Residents <i class="fas fa-heart"></i>
+                    <a href="#services" class="btn btn-secondary">
+                        Explore Services <i class="fas fa-compass"></i>
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-value">500<small>+</small></div>
-                        <div class="stat-label">Happy Pets</div>
+                        <div class="stat-value">8<small>+</small></div>
+                        <div class="stat-label">Pet Stays</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1,200</div>
+                        <div class="stat-label">Apartment Matches</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">320</div>
+                        <div class="stat-label">Trips Planned</div>
                     </div>
                     <div class="stat">
                         <div class="stat-value">4.9</div>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">100<small>%</small></div>
-                        <div class="stat-label">Satisfaction</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">50</div>
-                        <div class="stat-label">5-Star Reviews</div>
+                        <div class="stat-label">Average Rating</div>
                     </div>
                 </div>
             </div>
@@ -1497,156 +1279,116 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="pets" class="section gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our <span>Furry Friends</span> Gallery</h2>
-                <p>Meet the adorable pets who have enjoyed their stay at Coco's Paradise. Each one receives personalized care and endless love!</p>
-            </div>
-            <div class="gallery-filters">
-                <button class="filter-btn active">All Pets</button>
-                <button class="filter-btn"><i class="fas fa-cat"></i> Cats</button>
-                <button class="filter-btn"><i class="fas fa-dog"></i> Dogs</button>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&h=400&fit=crop" alt="Shiba">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Shiba</div>
-                        <div class="gallery-item-breed">Shiba Inu</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400&h=400&fit=crop" alt="Dodo">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Dodo</div>
-                        <div class="gallery-item-breed">British Shorthair</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=400&fit=crop" alt="Fifi">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Fifi</div>
-                        <div class="gallery-item-breed">Pomeranian</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400&h=400&fit=crop" alt="Marmel">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Marmel</div>
-                        <div class="gallery-item-breed">Orange Tabby</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop" alt="Chewbacca">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Chewbacca</div>
-                        <div class="gallery-item-breed">Golden Retriever</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=400&fit=crop" alt="Shadow">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Shadow</div>
-                        <div class="gallery-item-breed">Siamese</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=400&fit=crop" alt="Loki">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Loki</div>
-                        <div class="gallery-item-breed">German Shepherd</div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=400&h=400&fit=crop" alt="Luna">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-name">Luna</div>
-                        <div class="gallery-item-breed">Ragdoll</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
     <section id="services" class="section services-section">
         <div class="container">
             <div class="section-header">
-                <h2>Comprehensive Pet <span>Care</span></h2>
-                <p>Everything your pet needs for a comfortable and happy stay</p>
+                <h2>Everything in <span>One Hub</span></h2>
+                <p>Pet sitting, lease support, and travel advising — all designed to work together.</p>
             </div>
             <div class="services-tabs">
-                <button class="service-tab active">🏠 Services</button>
-                <button class="service-tab">✨ Essentials</button>
-                <button class="service-tab">➕ Add-ons</button>
+                <button class="service-tab active" data-service="pets">🐾 Pet Sitting</button>
+                <button class="service-tab" data-service="apartments">🏡 Apartments</button>
+                <button class="service-tab" data-service="travel">✈️ Travel Advisor</button>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Home Boarding</h3>
-                    <p>Your pet stays in our loving home, not a kennel. 24/7 supervision with plenty of cuddles and playtime.</p>
+                <div class="service-card" data-service="pets">
+                    <div class="service-icon">🐾</div>
+                    <h3>In-Home Pet Sitting</h3>
+                    <p>Trusted sitters provide daily care, playtime, and check-ins so pets stay relaxed in familiar spaces.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> 24/7 care & supervision</li>
-                        <li><i class="fas fa-check"></i> Comfy sleeping arrangements</li>
-                        <li><i class="fas fa-check"></i> Daily exercise & play</li>
-                        <li><i class="fas fa-check"></i> Medication administration</li>
+                        <li><i class="fas fa-check"></i> Morning & evening visits</li>
+                        <li><i class="fas fa-check"></i> Feeding & fresh water</li>
+                        <li><i class="fas fa-check"></i> Playtime and walks</li>
+                        <li><i class="fas fa-check"></i> Medication support</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💝</div>
-                    <h3>Personalized Care</h3>
-                    <p>Every pet is unique. We customize care routines to match your pet's specific needs and preferences.</p>
+                <div class="service-card" data-service="pets">
+                    <div class="service-icon">🦮</div>
+                    <h3>Overnight & Extended Stays</h3>
+                    <p>Boarding-style care with a homey feel, ideal for longer trips or weekend getaways.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Custom feeding schedules</li>
-                        <li><i class="fas fa-check"></i> Special diet accommodations</li>
-                        <li><i class="fas fa-check"></i> Behavioral preferences</li>
-                        <li><i class="fas fa-check"></i> One-on-one attention</li>
+                        <li><i class="fas fa-check"></i> Safe, cozy environment</li>
+                        <li><i class="fas fa-check"></i> Daily photo updates</li>
+                        <li><i class="fas fa-check"></i> Flexible pickup times</li>
+                        <li><i class="fas fa-check"></i> Pet personality matching</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Daily Updates</h3>
-                    <p>Stay connected with your furry friend! Receive daily photos and updates on how they're doing.</p>
+                <div class="service-card" data-service="pets">
+                    <div class="service-icon">🧼</div>
+                    <h3>Wellness & Routine Care</h3>
+                    <p>Keep pets comfortable with light grooming, routine updates, and extra TLC while you're away.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Photo & video updates</li>
-                        <li><i class="fas fa-check"></i> Eating & playing reports</li>
-                        <li><i class="fas fa-check"></i> 24/7 messaging available</li>
-                        <li><i class="fas fa-check"></i> Peace of mind guaranteed</li>
+                        <li><i class="fas fa-check"></i> Feeding & routine notes</li>
+                        <li><i class="fas fa-check"></i> Light brush-outs</li>
+                        <li><i class="fas fa-check"></i> Medication reminders</li>
+                        <li><i class="fas fa-check"></i> Calm check-ins</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="apartments">
+                    <div class="service-icon">🏡</div>
+                    <h3>Apartment Search Support</h3>
+                    <p>Licensed sales agent guidance to help you find the right apartment in Greater Boston.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> MLS access & vetted listings</li>
+                        <li><i class="fas fa-check"></i> Neighborhood guidance</li>
+                        <li><i class="fas fa-check"></i> Tour scheduling support</li>
+                        <li><i class="fas fa-check"></i> Application & move-in help</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-service="apartments">
+                    <div class="service-icon">🛏️</div>
+                    <h3>Apartment Strategy & Negotiation</h3>
+                    <p>Clear steps and trusted advice to help you secure the best lease terms.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Market pricing insights</li>
+                        <li><i class="fas fa-check"></i> Move-in timeline planning</li>
+                        <li><i class="fas fa-check"></i> Pet policy guidance</li>
+                        <li><i class="fas fa-check"></i> Lease review support</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-service="apartments">
+                    <div class="service-icon">📍</div>
+                    <h3>Neighborhood Matchmaking</h3>
+                    <p>Shortlist the right areas based on commute, budget, and lifestyle priorities.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Commute & transit fit</li>
+                        <li><i class="fas fa-check"></i> Building amenities</li>
+                        <li><i class="fas fa-check"></i> Local pricing trends</li>
+                        <li><i class="fas fa-check"></i> Tour route planning</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-service="travel">
+                    <div class="service-icon">✈️</div>
+                    <h3>Travel Advisor Deals</h3>
+                    <p>Personalized hotel and flight options with access to better pricing and perks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Hotel rate comparisons</li>
+                        <li><i class="fas fa-check"></i> Flight fare tracking</li>
+                        <li><i class="fas fa-check"></i> Upgrade & perk access</li>
+                        <li><i class="fas fa-check"></i> One-point contact</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-service="travel">
                     <div class="service-icon">🚗</div>
-                    <h3>Pick-Up & Drop-Off</h3>
-                    <p>Convenient transportation service within our service area for hassle-free pet care.</p>
+                    <h3>Concierge Coordination</h3>
+                    <p>Bundle pet care, apartment tours, and travel booking so your schedule stays effortless.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Door-to-door service</li>
-                        <li><i class="fas fa-check"></i> Safe pet transportation</li>
-                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                        <li><i class="fas fa-check"></i> Free within 10-mile radius</li>
+                        <li><i class="fas fa-check"></i> Pet taxi coordination</li>
+                        <li><i class="fas fa-check"></i> Tour & viewing setup</li>
+                        <li><i class="fas fa-check"></i> Booking reminders</li>
+                        <li><i class="fas fa-check"></i> 24/7 concierge chat</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛁</div>
-                    <h3>Grooming Services</h3>
-                    <p>Keep your pet looking and feeling their best with our optional grooming add-ons.</p>
+                <div class="service-card" data-service="travel">
+                    <div class="service-icon">🧳</div>
+                    <h3>Smart Itinerary Support</h3>
+                    <p>Polish your plans with time-saving tips, transfers, and backup options.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Bath & brush</li>
-                        <li><i class="fas fa-check"></i> Nail trimming</li>
-                        <li><i class="fas fa-check"></i> Ear cleaning</li>
-                        <li><i class="fas fa-check"></i> De-shedding treatment</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">☀️</div>
-                    <h3>Daycare Services</h3>
-                    <p>Full-day supervision and socialization for dogs who need daytime care while you're at work.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Up to 10 hours of care</li>
-                        <li><i class="fas fa-check"></i> Supervised play sessions</li>
-                        <li><i class="fas fa-check"></i> Rest & relaxation time</li>
-                        <li><i class="fas fa-check"></i> Socialization with others</li>
+                        <li><i class="fas fa-check"></i> Multi-city coordination</li>
+                        <li><i class="fas fa-check"></i> Airport transfer tips</li>
+                        <li><i class="fas fa-check"></i> Flexible rebooking</li>
+                        <li><i class="fas fa-check"></i> Dining & activity picks</li>
                     </ul>
                 </div>
             </div>
@@ -1658,7 +1400,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Serving Greater <span>Boston</span></h2>
-                <p>We proudly serve pet families within a 10-mile radius of Wellesley Hills. Convenient pickup and drop-off services available.</p>
+                <p>Local pet sitting, apartment search help, and travel advisor support — all centered around Greater Boston.</p>
             </div>
             <div class="area-container">
                 <div class="area-map">
@@ -1666,178 +1408,76 @@
                         <div class="area-radius">10<span>mi</span></div>
                         <div class="area-radius-label">Service Radius</div>
                         <div style="margin-top: 20px; padding: 16px; background: var(--white); border-radius: 12px;">
-                            <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=300&h=200&fit=crop" alt="Map placeholder" style="width: 100%; border-radius: 8px;">
+                            <svg viewBox="0 0 360 220" role="img" aria-label="Greater Boston service radius map" style="width: 100%; border-radius: 8px; background: #F7F2EE;">
+                                <defs>
+                                    <linearGradient id="mapGlow" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#D4A59A" stop-opacity="0.25" />
+                                        <stop offset="100%" stop-color="#8B6F5C" stop-opacity="0.25" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="0" y="0" width="360" height="220" fill="url(#mapGlow)" />
+                                <g opacity="0.25" stroke="#CBB8AE" stroke-width="0.5">
+                                    <path d="M0 30 H360" />
+                                    <path d="M0 60 H360" />
+                                    <path d="M0 90 H360" />
+                                    <path d="M0 120 H360" />
+                                    <path d="M0 150 H360" />
+                                    <path d="M0 180 H360" />
+                                    <path d="M40 0 V220" />
+                                    <path d="M80 0 V220" />
+                                    <path d="M120 0 V220" />
+                                    <path d="M160 0 V220" />
+                                    <path d="M200 0 V220" />
+                                    <path d="M240 0 V220" />
+                                    <path d="M280 0 V220" />
+                                    <path d="M320 0 V220" />
+                                </g>
+                                <path d="M40 52 L76 44 L112 54 L136 40 L170 48 L198 40 L232 52 L266 44 L308 62 L326 88 L318 116 L300 138 L272 152 L246 170 L208 168 L176 182 L144 170 L116 178 L90 162 L60 156 L38 132 Z" fill="#E6D8D1" />
+                                <path d="M270 58 L290 50 L318 62 L334 82 L336 110 L320 132 L306 120 L314 100 L300 86 L274 78 Z" fill="#CDE2EA" />
+                                <path d="M54 118 L88 108 L118 116 L148 104 L178 110 L214 102 L246 112 L270 104 L292 120 L280 138 L248 150 L216 158 L186 156 L160 166 L130 156 L102 166 L74 152 L56 142 Z" fill="#DCC9BF" />
+                                <circle cx="182" cy="116" r="50" fill="none" stroke="#D4A59A" stroke-width="2" stroke-dasharray="6 6" />
+                                <circle cx="182" cy="116" r="78" fill="none" stroke="#A68B7B" stroke-width="2" opacity="0.55" />
+                                <path d="M182 84 C170 84 162 93 162 104 C162 120 182 138 182 138 C182 138 202 120 202 104 C202 93 194 84 182 84 Z" fill="#8B6F5C" />
+                                <circle cx="182" cy="100" r="6" fill="#FDF8F5" />
+                                <circle cx="154" cy="104" r="3" fill="#8B6F5C" />
+                                <circle cx="206" cy="108" r="3" fill="#8B6F5C" />
+                                <circle cx="140" cy="132" r="3" fill="#8B6F5C" />
+                                <circle cx="214" cy="136" r="3" fill="#8B6F5C" />
+                                <circle cx="122" cy="116" r="3" fill="#8B6F5C" />
+                                <circle cx="238" cy="120" r="3" fill="#8B6F5C" />
+                                <text x="20" y="26" font-family="Nunito, sans-serif" font-size="12" fill="#6B5344">Greater Boston Area</text>
+                                <text x="20" y="42" font-family="Nunito, sans-serif" font-size="11" fill="#8B6F5C">10 mi service radius</text>
+                                <text x="188" y="94" font-family="Nunito, sans-serif" font-size="9" fill="#6B5344">Boston</text>
+                                <text x="122" y="96" font-family="Nunito, sans-serif" font-size="8" fill="#7B6A60">Cambridge</text>
+                                <text x="210" y="96" font-family="Nunito, sans-serif" font-size="8" fill="#7B6A60">Somerville</text>
+                                <text x="130" y="150" font-family="Nunito, sans-serif" font-size="8" fill="#7B6A60">Newton</text>
+                                <text x="216" y="156" font-family="Nunito, sans-serif" font-size="8" fill="#7B6A60">Quincy</text>
+                                <text x="102" y="130" font-family="Nunito, sans-serif" font-size="8" fill="#7B6A60">Brookline</text>
+                            </svg>
                         </div>
                     </div>
                 </div>
                 <div class="area-info">
-                    <h3>Areas We Serve</h3>
+                    <h3>Local Areas We Support</h3>
                     <div class="area-list">
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Wellesley</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Boston</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Cambridge</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Somerville</div>
                         <div class="area-item"><i class="fas fa-map-marker-alt"></i> Newton</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Needham</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Natick</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Malden</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Chelsea</div>
                         <div class="area-item"><i class="fas fa-map-marker-alt"></i> Brookline</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Weston</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Dover</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Dedham</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Framingham</div>
-                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Wayland</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Quincy</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Medford</div>
+                        <div class="area-item"><i class="fas fa-map-marker-alt"></i> Revere</div>
                     </div>
                     <div class="area-perks">
-                        <h4>🚗 Pickup & Drop-off Service</h4>
+                        <h4>🚗 Local Support Perks</h4>
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> Free within 10-mile radius</li>
-                            <li><i class="fas fa-check-circle"></i> $10 fee for 15+ miles of distance</li>
+                            <li><i class="fas fa-check-circle"></i> Pet pickup & key handoff</li>
+                            <li><i class="fas fa-check-circle"></i> Local host assistance</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tour Section -->
-    <section class="section tour-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tour Our <span>Pet Paradise</span></h2>
-                <p>Explore every corner of our luxury boarding home in Wellesley Hills</p>
-            </div>
-            <div class="tour-grid">
-                <div class="tour-item">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=1000&fit=crop" alt="Living Room">
-                    <div class="tour-item-label"><i class="fas fa-home"></i> Grand Entrance</div>
-                </div>
-                <div class="tour-item">
-                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop" alt="Bedroom">
-                    <div class="tour-item-label"><i class="fas fa-bed"></i> Cozy Quarters</div>
-                </div>
-                <div class="tour-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Backyard">
-                    <div class="tour-item-label"><i class="fas fa-tree"></i> Play Yard</div>
-                </div>
-                <div class="tour-item">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Kitchen">
-                    <div class="tour-item-label"><i class="fas fa-utensils"></i> Feeding Station</div>
-                </div>
-                <div class="tour-item">
-                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&h=300&fit=crop" alt="Lounge">
-                    <div class="tour-item-label"><i class="fas fa-couch"></i> Relaxation Zone</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="booking" class="section booking-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Book Your Pet's <span>Dream Stay</span></h2>
-                <p>Check availability and reserve your spot. Limited spaces ensure personalized care for every pet.</p>
-            </div>
-            <div class="booking-container">
-                <div class="calendar">
-                    <div class="calendar-header">
-                        <h3>November 2025</h3>
-                        <div class="calendar-nav">
-                            <button><i class="fas fa-chevron-left"></i></button>
-                            <button><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="calendar-grid">
-                        <div class="calendar-day-name">Sun</div>
-                        <div class="calendar-day-name">Mon</div>
-                        <div class="calendar-day-name">Tue</div>
-                        <div class="calendar-day-name">Wed</div>
-                        <div class="calendar-day-name">Thu</div>
-                        <div class="calendar-day-name">Fri</div>
-                        <div class="calendar-day-name">Sat</div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day available">1</div>
-                        <div class="calendar-day available">2</div>
-                        <div class="calendar-day available">3</div>
-                        <div class="calendar-day">4</div>
-                        <div class="calendar-day">5</div>
-                        <div class="calendar-day available">6</div>
-                        <div class="calendar-day available">7</div>
-                        <div class="calendar-day available">8</div>
-                        <div class="calendar-day selected">9</div>
-                        <div class="calendar-day selected">10</div>
-                        <div class="calendar-day selected">11</div>
-                        <div class="calendar-day selected">12</div>
-                        <div class="calendar-day selected">13</div>
-                        <div class="calendar-day available">14</div>
-                        <div class="calendar-day available">15</div>
-                        <div class="calendar-day available">16</div>
-                        <div class="calendar-day available">17</div>
-                        <div class="calendar-day available">18</div>
-                        <div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div>
-                        <div class="calendar-day available">21</div>
-                        <div class="calendar-day available">22</div>
-                        <div class="calendar-day available">23</div>
-                        <div class="calendar-day available">24</div>
-                        <div class="calendar-day available">25</div>
-                        <div class="calendar-day available">26</div>
-                        <div class="calendar-day available">27</div>
-                        <div class="calendar-day available">28</div>
-                        <div class="calendar-day available">29</div>
-                        <div class="calendar-day available">30</div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                        <div class="calendar-day unavailable"></div>
-                    </div>
-                    <div style="margin-top: 24px; display: flex; gap: 20px; justify-content: center; font-size: 0.85rem;">
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <div style="width: 16px; height: 16px; background: var(--accent-light); border-radius: 50%;"></div>
-                            <span>Available</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <div style="width: 16px; height: 16px; background: var(--primary); border-radius: 50%;"></div>
-                            <span>Selected</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="booking-form">
-                    <h3>🐾 Quick Booking</h3>
-                    <div class="form-group">
-                        <label>Pet Type</label>
-                        <select>
-                            <option>Select a pet type</option>
-                            <option>🐕 Dog</option>
-                            <option>🐱 Cat</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Pet Name</label>
-                        <input type="text" placeholder="Enter your pet's name">
-                    </div>
-                    <div class="form-group">
-                        <label>Check-in Date</label>
-                        <input type="date">
-                    </div>
-                    <div class="form-group">
-                        <label>Check-out Date</label>
-                        <input type="date">
-                    </div>
-                    <div class="form-group">
-                        <label>Special Requests</label>
-                        <textarea rows="3" placeholder="Any special needs or instructions..."></textarea>
-                    </div>
-                    <div class="booking-price">
-                        <span class="booking-price-label">🏷️ Special Offer</span>
-                        <span class="booking-price-value">$175 per night</span>
-                    </div>
-                    <button class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        Complete Booking <i class="fas fa-arrow-right"></i>
-                    </button>
                 </div>
             </div>
         </div>
@@ -1847,16 +1487,17 @@
     <section class="section testimonials-section">
         <div class="container">
             <div class="section-header">
-                <h2>What <span>Pet Parents</span> Say</h2>
-                <p>Don't just take our word for it - hear from the families who trust us with their beloved pets</p>
+                <h2>What Clients <span>Love</span></h2>
+                <p>Stories from pet parents, apartment seekers, and travelers who use Omni Forest.</p>
             </div>
             <div class="testimonials-filters">
-                <button class="filter-btn active">All Reviews</button>
-                <button class="filter-btn">Cat Parents</button>
-                <button class="filter-btn">Dog Parents</button>
+                <button class="filter-btn active" data-service="all">All Reviews</button>
+                <button class="filter-btn" data-service="pets">Pet Sitting</button>
+                <button class="filter-btn" data-service="apartments">Apartments</button>
+                <button class="filter-btn" data-service="travel">Travel Advisor</button>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-service="pets apartments">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -1864,16 +1505,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Coco's is absolutely amazing! Luna can be very picky about new places, but she seemed perfectly at home. The daily updates and photos put our minds at ease. We've found our forever boarding home!"</p>
+                    <p class="testimonial-text">"Omni Forest made it easy to book a sitter and get apartment touring lined up in the same week. Everything was smooth."</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah M." class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">Sarah M.</div>
-                            <div class="testimonial-pet">Luna's mom 🐱</div>
+                        <div class="testimonial-pet">Pet sitting + apartments</div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-service="travel">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -1881,16 +1522,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Max and boarding haven't mixed well in the past, but Coco's was different. They actually wanted to know his quirks, favorite toys, and routines. He came home happy, calm, and well-cared for. Highly recommend!"</p>
+                    <p class="testimonial-text">"Their travel advising found a better hotel rate and a cheaper flight option than we could find on our own."</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Michael Chen" class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">Michael Chen</div>
-                            <div class="testimonial-pet">Max's dad 🐕</div>
+                        <div class="testimonial-pet">Travel advisor</div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-service="apartments pets">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -1898,12 +1539,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Coco's went above and beyond for our senior cat. They administered her daily medication perfectly and gave her extra TLC. She seemed relaxed in every photo they sent. We trust them completely!"</p>
+                    <p class="testimonial-text">"We needed a fast apartment match and midday dog walks during the move. Everything was seamless and coordinated."</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily Rodriguez" class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">Emily Rodriguez</div>
-                            <div class="testimonial-pet">Whiskers' mom 🐱</div>
+                        <div class="testimonial-pet">Apartments + pet care</div>
                         </div>
                     </div>
                 </div>
@@ -1916,42 +1557,42 @@
         <div class="container">
             <div class="about-container">
                 <div class="about-content">
-                    <h2>Welcome to Coco's <span>Pet Paradise</span></h2>
-                    <p>Welcome to our family! I am self boarding service lover in beautiful Wellesley Hills. With a genuine love for animals and over 5 years of professional pet care experience, I am committed to providing your furry family members with the best care possible.</p>
-                    <p>Our family-style approach means your pet isn't just another guest - they become part of our family during their stay. We maintain a limited number of boarders to ensure each pet gets the individual attention they deserve.</p>
-                    <p>Having cared for 10 beloved Persians and 8 amazing dogs, we understand the unique personality and needs of each pet. Your pet's comfort, safety, and happiness are our absolute priorities.</p>
+                    <h2>Welcome to <span>Omni Forest</span></h2>
+                    <p>Omni Forest helps Greater Boston clients book trusted pet care, find their next apartment lease, and lock in great hotel and flight deals—without the hassle.</p>
+                    <p>We provide responsive communication and hands-on coordination: apartment shortlists, tour scheduling, application guidance, and travel bookings that prioritize value.</p>
+                    <p>Moving soon, planning a trip, or need pet care while you travel? Omni Forest brings it all together in one place.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-certificate"></i></div>
                             <div class="about-feature-text">
-                                <h4>Pet First Aid Certified</h4>
-                                <p>Trained to handle emergencies with care</p>
+                                <h4>Certified Pet Care</h4>
+                                <p>Safety-first sitters and trusted protocols</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
                             <div class="about-feature-text">
-                                <h4>Fully Insured & Licensed</h4>
-                                <p>Your pet's safety is guaranteed</p>
+                                <h4>Apartment Search</h4>
+                                <p>Tours, applications, and lease guidance</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon"><i class="fas fa-home"></i></div>
                             <div class="about-feature-text">
-                                <h4>Home Environment</h4>
-                                <p>Cozy and comfortable stay just like home</p>
+                                <h4>Hotel & Flight Deals</h4>
+                                <p>Hotel and flight deals, perks, and planning help</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=600&h=700&fit=crop" alt="Happy pets at Coco's" class="about-image-main">
+                    <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=600&h=700&fit=crop" alt="Omni Forest hosts and pets" class="about-image-main">
                     <div class="about-owner">
-                        <div class="about-owner-name">Coco Chen</div>
-                        <div class="about-owner-title">Founder & Pet Care Specialist</div>
-                        <p class="about-owner-text">"Every pet that comes through our door is treated like family. That's my promise to you."</p>
+                        <div class="about-owner-name">Nelson & Team</div>
+                        <div class="about-owner-title">Founders, Omni Forest</div>
+                        <p class="about-owner-text">"We believe travel should feel effortless, and pet care should feel personal."</p>
                         <a href="#contact" class="btn btn-primary" style="margin-top: 16px; padding: 10px 20px; font-size: 0.9rem;">
-                            Learn More About Us <i class="fas fa-arrow-right"></i>
+                            Meet the Team <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -1964,20 +1605,20 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stats-item">
-                    <div class="stats-item-value">500+</div>
-                    <div class="stats-item-label">Happy Pets Served</div>
+                    <div class="stats-item-value">8+</div>
+                    <div class="stats-item-label">Pet Stays Booked</div>
                 </div>
                 <div class="stats-item">
-                    <div class="stats-item-value">5 Years</div>
-                    <div class="stats-item-label">Experience</div>
+                    <div class="stats-item-value">32</div>
+                    <div class="stats-item-label">Apartment Matches</div>
                 </div>
                 <div class="stats-item">
-                    <div class="stats-item-value">100%</div>
-                    <div class="stats-item-label">Satisfaction Rate</div>
+                    <div class="stats-item-value">45</div>
+                    <div class="stats-item-label">Travel Bookings</div>
                 </div>
                 <div class="stats-item">
-                    <div class="stats-item-value">Certified</div>
-                    <div class="stats-item-label">Pet First Aid</div>
+                    <div class="stats-item-value">4.9</div>
+                    <div class="stats-item-label">Average Rating</div>
                 </div>
             </div>
         </div>
@@ -1990,9 +1631,9 @@
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <div class="footer-logo-icon">🐾</div>
-                        <div class="footer-logo-text">Coco's Pet Paradise</div>
+                        <div class="footer-logo-text">Omni Forest</div>
                     </div>
-                    <p class="footer-description">Premium pet boarding services in Wellesley Hills. Where every pet is treated like family.</p>
+                    <p class="footer-description">One-stop hub for pet sitting, apartment support, and travel advising in Greater Boston.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -2001,29 +1642,9 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pets">Gallery</a></li>
-                        <li><a href="#booking">Book Now</a></li>
-                        <li><a href="#about">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Cat Boarding</a></li>
-                        <li><a href="#">Dog Boarding</a></li>
-                        <li><a href="#">Dog Daycare</a></li>
-                        <li><a href="#">Pet Taxi</a></li>
-                        <li><a href="#">Grooming</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
                     <h4>Contact Us</h4>
                     <ul class="footer-links footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Wellesley Hills, MA</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Boston, MA</li>
                         <li><i class="fas fa-phone"></i> (617) 555-PETS</li>
                         <li><i class="fas fa-envelope"></i> nelson@omniforest.xyz</li>
                         <li><i class="fas fa-clock"></i> Check-in: 8AM - 8PM</li>
@@ -2031,7 +1652,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Omni Forest. All rights reserved.</p>
+                <p class="footer-copyright">© 2026 Omni Forest. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -2108,29 +1729,66 @@
         });
 
         // Service Tabs Functionality
+        const serviceCards = Array.from(document.querySelectorAll('.service-card'));
+        const filterServices = (service) => {
+            serviceCards.forEach(card => {
+                const matches = card.dataset.service === service;
+                card.classList.toggle('hidden', !matches);
+            });
+        };
+
+        const activateServiceTab = (service) => {
+            const targetTab = document.querySelector(`.service-tab[data-service="${service}"]`);
+            if (!targetTab) {
+                return;
+            }
+            document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
+            targetTab.classList.add('active');
+            filterServices(service);
+        };
+
         document.querySelectorAll('.service-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
+                activateServiceTab(this.dataset.service);
+            });
+        });
+
+        const activeTab = document.querySelector('.service-tab.active');
+        if (activeTab) {
+            filterServices(activeTab.dataset.service);
+        }
+
+        document.querySelectorAll('.nav-links a[data-service]').forEach(link => {
+            link.addEventListener('click', function() {
+                activateServiceTab(this.dataset.service);
             });
         });
 
         // Testimonial Filter Functionality
+        const testimonialCards = Array.from(document.querySelectorAll('.testimonial-card'));
+        const filterTestimonials = (service) => {
+            testimonialCards.forEach(card => {
+                if (service === 'all') {
+                    card.classList.remove('hidden');
+                    return;
+                }
+                const services = (card.dataset.service || '').split(' ');
+                card.classList.toggle('hidden', !services.includes(service));
+            });
+        };
+
         document.querySelectorAll('.testimonials-filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.testimonials-filters .filter-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
+                filterTestimonials(this.dataset.service || 'all');
             });
         });
 
-        // Calendar Day Selection
-        document.querySelectorAll('.calendar-day:not(.unavailable)').forEach(day => {
-            day.addEventListener('click', function() {
-                if (this.textContent) {
-                    this.classList.toggle('selected');
-                }
-            });
-        });
+        const activeTestimonialTab = document.querySelector('.testimonials-filters .filter-btn.active');
+        if (activeTestimonialTab) {
+            filterTestimonials(activeTestimonialTab.dataset.service || 'all');
+        }
 
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
