@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #8B6F5C;
-            --primary-light: #A68B7B;
-            --primary-dark: #6B5344;
-            --accent: #D4A59A;
-            --accent-light: #F5E6E0;
-            --cream: #FDF8F5;
-            --cream-dark: #F5EDE8;
-            --text-dark: #3D3D3D;
-            --text-medium: #666666;
-            --text-light: #999999;
+            --primary: #C97A48;
+            --primary-light: #E4A36B;
+            --primary-dark: #A45B2C;
+            --accent: #F0B08A;
+            --accent-light: #FBE7D8;
+            --cream: #FFF7F1;
+            --cream-dark: #F6E9DE;
+            --text-dark: #3B2E26;
+            --text-medium: #6B5444;
+            --text-light: #9C7E6A;
             --white: #FFFFFF;
             --success: #7CB97C;
-            --border: #E8DDD6;
-            --shadow: rgba(139, 111, 92, 0.1);
-            --shadow-strong: rgba(139, 111, 92, 0.2);
+            --border: #EBD6C6;
+            --shadow: rgba(201, 122, 72, 0.12);
+            --shadow-strong: rgba(201, 122, 72, 0.22);
         }
 
         * {
@@ -89,7 +89,7 @@
         .logo-icon {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, #5FA36C 0%, #2F6B44 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -98,7 +98,7 @@
         }
 
         .logo-icon::before {
-            content: '🐾';
+            content: '🌲';
             font-size: 22px;
         }
 
@@ -601,6 +601,49 @@
             font-size: 0.8rem;
         }
 
+        /* Schedule Section */
+        .schedule-section {
+            background: var(--white);
+        }
+
+        .schedule-container {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .schedule-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .schedule-details p {
+            color: var(--text-medium);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .schedule-highlights {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .schedule-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .schedule-highlights i {
+            color: var(--success);
+            margin-top: 3px;
+        }
+
         /* Service Area Section */
         .area-section {
             background: var(--white);
@@ -928,7 +971,7 @@
         .footer-logo-icon {
             width: 50px;
             height: 50px;
-            background: var(--accent);
+            background: linear-gradient(135deg, #5FA36C 0%, #2F6B44 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1058,6 +1101,10 @@
 
             .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .schedule-container {
+                grid-template-columns: 1fr;
             }
 
             .footer-grid {
@@ -1214,11 +1261,12 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services" data-service="pets">Pet Sitting</a></li>
+                <li><a href="#schedule">Schedule Pet Sitting</a></li>
                 <li><a href="#services" data-service="apartments">Apartments</a></li>
                 <li><a href="#services" data-service="travel">Travel Advisor</a></li>
+                <li><a href="#story">Our Story</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="nav-cta">Contact Us <i class="fas fa-arrow-right"></i></a></li>
+                <li><a href="mailto:nelson@omniforest.xyz" class="nav-cta">Contact Us <i class="fas fa-arrow-right"></i></a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -1246,7 +1294,7 @@
                     <span><strong>Travel Advisor:</strong> hotel & flight savings support</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary">
                         Get in Touch <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#services" class="btn btn-secondary">
@@ -1273,9 +1321,9 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=800&fit=crop" alt="Happy Golden Retriever" class="hero-image-main">
-                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=300&fit=crop" alt="Orange Cat" class="hero-image-float hero-image-float-1">
-                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300&h=300&fit=crop" alt="French Bulldog" class="hero-image-float hero-image-float-2">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=800&fit=crop" alt="People moving into a city home" class="hero-image-main">
+                <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=300&h=300&fit=crop" alt="Pet sitting at home" class="hero-image-float hero-image-float-1">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&h=300&fit=crop" alt="Island leisure getaway with travelers" class="hero-image-float hero-image-float-2">
             </div>
         </div>
     </section>
@@ -1285,7 +1333,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Everything in <span>One Hub</span></h2>
-                <p>Pet sitting, lease support, and travel advising — all designed to work together.</p>
+                <p>Pet sitting, lease support, and travel advising, all designed to work together.</p>
             </div>
             <div class="services-tabs">
                 <button class="service-tab active" data-service="pets">🐾 Pet Sitting</button>
@@ -1396,12 +1444,37 @@
         </div>
     </section>
 
+    <!-- Schedule Section -->
+    <section id="schedule" class="section schedule-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Schedule <span>Pet Sitting</span></h2>
+                <p>Tell us your dates and needs, and we will confirm availability within 24 hours.</p>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-details">
+                    <h3>Reserve with confidence</h3>
+                    <p>We confirm each request personally and match your pet with the right sitter. Choose your dates and we will follow up within 24 hours.</p>
+                    <ul class="schedule-highlights">
+                        <li><i class="fas fa-check-circle"></i> Trusted sitters and house sitting support</li>
+                        <li><i class="fas fa-check-circle"></i> Daily updates with photos</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible check in and check out windows</li>
+                        <li><i class="fas fa-check-circle"></i> Priority support for travel weeks</li>
+                    </ul>
+                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 24px;">
+                        Request Dates <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Service Area Section -->
     <section class="section area-section">
         <div class="container">
             <div class="section-header">
                 <h2>Serving Greater <span>Boston</span></h2>
-                <p>Local pet sitting, apartment search help, and travel advisor support — all centered around Greater Boston.</p>
+                <p>Local pet sitting, apartment search help, and travel advisor support, all centered around Greater Boston.</p>
             </div>
             <div class="area-container">
                 <div class="area-map">
@@ -1459,7 +1532,7 @@
                     </div>
                 </div>
                 <div class="area-info">
-                    <h3>Local Areas We Support</h3>
+                    <h3>Examples of Local Areas We Support</h3>
                     <div class="area-list">
                         <div class="area-item"><i class="fas fa-map-marker-alt"></i> Boston</div>
                         <div class="area-item"><i class="fas fa-map-marker-alt"></i> Cambridge</div>
@@ -1553,13 +1626,34 @@
         </div>
     </section>
 
+    <!-- Our Story Section -->
+    <section id="story" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Story</span></h2>
+                <p>We built Omni Forest from lived experience, not a business plan.</p>
+            </div>
+            <div class="about-container">
+                <div class="about-content">
+                    <p>We’re Nelson & Team, and before Omni Forest existed, we were just a family on the move. We relocated across countries during our teenage years, then across the U.S. for schools, jobs, and new chapters. Every move came with the same stress: finding a safe home in a new city, getting settled fast, and making sure our loved ones were taken care of.</p>
+                    <p>Boston became home after one of those moves. We remember the late-night apartment searches, the pressure of starting a new role, and the feeling of being pulled in every direction at once. For international students and newcomers, the culture shift adds another layer, different systems, different neighborhoods, and a lot of unknowns. For locals, it is still the same crunch of timing, trust, and cost. We have lived both.</p>
+                    <p>As our family grew, so did the logistics, especially when our furry kids became part of the equation. Planning a trip meant juggling flights, hotels, and itineraries while also trying to find a trustworthy pet sitter or house sitter. We went through the scramble of last-minute cancellations, unclear pricing, and not knowing who to trust with our home or pets. It was exhausting.</p>
+                    <p>That experience is why Omni Forest exists, to make the move, the trip, and the everyday life transitions feel easier and more human. Omni Forest is our way of giving people what we wished we had, one place that helps you find a home, plan travel with confidence, and care for the pets who are family. We are here to walk with you through the messy parts, so you can focus on building a life you are excited about in Boston.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=700&fit=crop" alt="Family arriving in Boston" class="about-image-main">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
             <div class="about-container">
                 <div class="about-content">
                     <h2>Welcome to <span>Omni Forest</span></h2>
-                    <p>Omni Forest helps Greater Boston clients book trusted pet care, find their next apartment lease, and lock in great hotel and flight deals—without the hassle.</p>
+                    <p>Omni Forest helps Greater Boston clients book trusted pet care, find their next apartment lease, and lock in great hotel and flight deals without the hassle.</p>
                     <p>We provide responsive communication and hands-on coordination: apartment shortlists, tour scheduling, application guidance, and travel bookings that prioritize value.</p>
                     <p>Moving soon, planning a trip, or need pet care while you travel? Omni Forest brings it all together in one place.</p>
                     <div class="about-features">
@@ -1591,8 +1685,8 @@
                     <div class="about-owner">
                         <div class="about-owner-name">Nelson & Team</div>
                         <div class="about-owner-title">Founders, Omni Forest</div>
-                        <p class="about-owner-text">"We believe travel should feel effortless, and pet care should feel personal."</p>
-                        <a href="#contact" class="btn btn-primary" style="margin-top: 16px; padding: 10px 20px; font-size: 0.9rem;">
+                        <p class="about-owner-text">"We are here to help you find a home, build your family, and enjoy life in Boston every step of the way."</p>
+                        <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 16px; padding: 10px 20px; font-size: 0.9rem;">
                             Meet the Team <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
