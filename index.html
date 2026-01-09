@@ -94,12 +94,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
-        .logo-icon::before {
-            content: '🌲';
-            font-size: 22px;
+        .logo-icon svg,
+        .footer-logo-icon svg {
+            width: 26px;
+            height: 26px;
+            display: block;
         }
 
         .logo-text {
@@ -537,7 +538,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
@@ -599,49 +600,6 @@
         .service-features li i {
             color: var(--success);
             font-size: 0.8rem;
-        }
-
-        /* Schedule Section */
-        .schedule-section {
-            background: var(--white);
-        }
-
-        .schedule-container {
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .schedule-details h3 {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-        }
-
-        .schedule-details p {
-            color: var(--text-medium);
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .schedule-highlights {
-            list-style: none;
-            display: grid;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .schedule-highlights li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            color: var(--text-medium);
-            font-size: 0.95rem;
-            text-align: left;
-        }
-
-        .schedule-highlights i {
-            color: var(--success);
-            margin-top: 3px;
         }
 
         /* Service Area Section */
@@ -976,7 +934,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
         }
 
         .footer-logo-text {
@@ -1103,10 +1060,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .schedule-container {
-                grid-template-columns: 1fr;
-            }
-
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1168,16 +1121,16 @@
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
+            }ß
 
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-
+ß
             .about-owner {
                 position: relative;
-                bottom: auto;
+                bottomß: auto;
                 right: auto;
                 margin-top: -60px;
                 margin-left: auto;
@@ -1252,7 +1205,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon"></div>
+                <div class="logo-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" aria-label="Omni Forest logo">
+                        <circle cx="32" cy="32" r="20" fill="#CDEBD6"/>
+                        <path d="M32 12 L22 32 L28 32 L20 50 L32 38 L44 50 L36 32 L42 32 Z" fill="#2F6B44"/>
+                        <circle cx="24" cy="26" r="4" fill="#5FA36C"/>
+                        <circle cx="40" cy="26" r="4" fill="#5FA36C"/>
+                    </svg>
+                </div>
                 <div class="logo-text">
                     Omni Forest
                     <span>EST. BOSTON 2025</span>
@@ -1261,7 +1221,6 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services" data-service="pets">Pet Sitting</a></li>
-                <li><a href="#schedule">Schedule Pet Sitting</a></li>
                 <li><a href="#services" data-service="apartments">Apartments</a></li>
                 <li><a href="#services" data-service="travel">Travel Advisor</a></li>
                 <li><a href="#story">Our Story</a></li>
@@ -1355,12 +1314,12 @@
                 <div class="service-card" data-service="pets">
                     <div class="service-icon">🦮</div>
                     <h3>Overnight & Extended Stays</h3>
-                    <p>Boarding-style care with a homey feel, ideal for longer trips or weekend getaways.</p>
+                    <p>Boarding-style care with a homey feel, plus a meet and greet so you feel confident about the fit.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check"></i> Safe, cozy environment</li>
                         <li><i class="fas fa-check"></i> Daily photo updates</li>
                         <li><i class="fas fa-check"></i> Flexible pickup times</li>
-                        <li><i class="fas fa-check"></i> Pet personality matching</li>
+                        <li><i class="fas fa-check"></i> Free overnight trial for long stays</li>
                     </ul>
                 </div>
                 <div class="service-card" data-service="pets">
@@ -1373,6 +1332,20 @@
                         <li><i class="fas fa-check"></i> Medication reminders</li>
                         <li><i class="fas fa-check"></i> Calm check-ins</li>
                     </ul>
+                </div>
+                <div class="service-card" data-service="pets">
+                    <div class="service-icon">📅</div>
+                    <h3>Schedule Pet Sitting</h3>
+                    <p>Tell us your dates and needs, and we will confirm availability within 24 hours.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Personalized sitter matching</li>
+                        <li><i class="fas fa-check"></i> Flexible time windows</li>
+                        <li><i class="fas fa-check"></i> Daily updates included</li>
+                        <li><i class="fas fa-check"></i> House sitting support</li>
+                    </ul>
+                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 16px;">
+                        Request Dates <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card" data-service="apartments">
                     <div class="service-icon">🏡</div>
@@ -1407,6 +1380,20 @@
                         <li><i class="fas fa-check"></i> Tour route planning</li>
                     </ul>
                 </div>
+                <div class="service-card" data-service="apartments">
+                    <div class="service-icon">🗓️</div>
+                    <h3>Schedule an Apartment Consult</h3>
+                    <p>Share your move in date, budget, and priorities. We will follow up to plan tours.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Timeline planning</li>
+                        <li><i class="fas fa-check"></i> Listing shortlist</li>
+                        <li><i class="fas fa-check"></i> Tour coordination</li>
+                        <li><i class="fas fa-check"></i> Application guidance</li>
+                    </ul>
+                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 16px;">
+                        Schedule a Call <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
                 <div class="service-card" data-service="travel">
                     <div class="service-icon">✈️</div>
                     <h3>Travel Advisor Deals</h3>
@@ -1440,29 +1427,18 @@
                         <li><i class="fas fa-check"></i> Dining & activity picks</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Schedule Section -->
-    <section id="schedule" class="section schedule-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Schedule <span>Pet Sitting</span></h2>
-                <p>Tell us your dates and needs, and we will confirm availability within 24 hours.</p>
-            </div>
-            <div class="schedule-container">
-                <div class="schedule-details">
-                    <h3>Reserve with confidence</h3>
-                    <p>We confirm each request personally and match your pet with the right sitter. Choose your dates and we will follow up within 24 hours.</p>
-                    <ul class="schedule-highlights">
-                        <li><i class="fas fa-check-circle"></i> Trusted sitters and house sitting support</li>
-                        <li><i class="fas fa-check-circle"></i> Daily updates with photos</li>
-                        <li><i class="fas fa-check-circle"></i> Flexible check in and check out windows</li>
-                        <li><i class="fas fa-check-circle"></i> Priority support for travel weeks</li>
+                <div class="service-card" data-service="travel">
+                    <div class="service-icon">🌴</div>
+                    <h3>Schedule a Travel Consult</h3>
+                    <p>Tell us your travel goals and dates, and we will find the best options and perks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Hotel and flight options</li>
+                        <li><i class="fas fa-check"></i> Deal monitoring</li>
+                        <li><i class="fas fa-check"></i> One point of contact</li>
+                        <li><i class="fas fa-check"></i> Itinerary guidance</li>
                     </ul>
-                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 24px;">
-                        Request Dates <i class="fas fa-arrow-right"></i>
+                    <a href="mailto:nelson@omniforest.xyz" class="btn btn-primary" style="margin-top: 16px;">
+                        Plan My Trip <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -1474,7 +1450,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Serving Greater <span>Boston</span></h2>
-                <p>Local pet sitting, apartment search help, and travel advisor support, all centered around Greater Boston.</p>
+                <p>Pet sitting and apartment support are focused on Greater Boston. Travel booking is available worldwide.</p>
             </div>
             <div class="area-container">
                 <div class="area-map">
@@ -1638,7 +1614,7 @@
                     <p>We’re Nelson & Team, and before Omni Forest existed, we were just a family on the move. We relocated across countries during our teenage years, then across the U.S. for schools, jobs, and new chapters. Every move came with the same stress: finding a safe home in a new city, getting settled fast, and making sure our loved ones were taken care of.</p>
                     <p>Boston became home after one of those moves. We remember the late-night apartment searches, the pressure of starting a new role, and the feeling of being pulled in every direction at once. For international students and newcomers, the culture shift adds another layer, different systems, different neighborhoods, and a lot of unknowns. For locals, it is still the same crunch of timing, trust, and cost. We have lived both.</p>
                     <p>As our family grew, so did the logistics, especially when our furry kids became part of the equation. Planning a trip meant juggling flights, hotels, and itineraries while also trying to find a trustworthy pet sitter or house sitter. We went through the scramble of last-minute cancellations, unclear pricing, and not knowing who to trust with our home or pets. It was exhausting.</p>
-                    <p>That experience is why Omni Forest exists, to make the move, the trip, and the everyday life transitions feel easier and more human. Omni Forest is our way of giving people what we wished we had, one place that helps you find a home, plan travel with confidence, and care for the pets who are family. We are here to walk with you through the messy parts, so you can focus on building a life you are excited about in Boston.</p>
+                    <p>That experience is why Omni Forest exists, to make the move, the trip, and the everyday life transitions feel easier and more human. Omni Forest is our way of giving people what we wished we had, one place that helps you find a home, plan travel with confidence, and care for the pets who are family. Even if you are outside Boston, we can still help you book flights and hotels around the world. We are here to walk with you through the messy parts, so you can focus on building a life you are excited about in Boston and beyond.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=700&fit=crop" alt="Family arriving in Boston" class="about-image-main">
@@ -1725,7 +1701,14 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="footer-logo-icon">🐾</div>
+                        <div class="footer-logo-icon" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" role="img" aria-label="Omni Forest logo">
+                                <circle cx="32" cy="32" r="20" fill="#CDEBD6"/>
+                                <path d="M32 12 L22 32 L28 32 L20 50 L32 38 L44 50 L36 32 L42 32 Z" fill="#2F6B44"/>
+                                <circle cx="24" cy="26" r="4" fill="#5FA36C"/>
+                                <circle cx="40" cy="26" r="4" fill="#5FA36C"/>
+                            </svg>
+                        </div>
                         <div class="footer-logo-text">Omni Forest</div>
                     </div>
                     <p class="footer-description">One-stop hub for pet sitting, apartment support, and travel advising in Greater Boston.</p>
